@@ -1,71 +1,34 @@
 {
-  "name": "typescript-action",
-  "description": "GitHub Actions TypeScript template",
+  "name": "github-package-version",
+  "description": "Get the latest version of a package from GitHub Packages",
+  "license": "MIT",
   "version": "0.0.0",
-  "author": "",
-  "private": true,
-  "homepage": "https://github.com/actions/typescript-action",
+  "author": "Svetlin Ralchev",
+  "homepage": "https://github.com/ci-tasks/github-package-version",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions/typescript-action.git"
+    "url": "git+https://github.com/ci-tasks/github-package-version.git"
   },
   "bugs": {
-    "url": "https://github.com/actions/typescript-action/issues"
+    "url": "https://github.com/actions/github-package-version/issues"
   },
   "keywords": [
-    "actions",
-    "node",
-    "setup"
+    "github-actions"
   ],
-  "exports": {
-    ".": "./dist/index.js"
-  },
+  "engineStrict": true,
   "engines": {
-    "node": ">=20"
+    "node": ">=16",
+    "pnpm": ">=8"
   },
+  "packageManager": "pnpm@8.6.11",
   "scripts": {
-    "bundle": "npm run format:write && npm run package",
-    "ci-test": "jest",
-    "format:write": "prettier --write **/*.ts",
-    "format:check": "prettier --check **/*.ts",
+    "test": "jest",
     "lint": "npx eslint . -c ./.github/linters/.eslintrc.yml",
-    "package": "ncc build src/index.ts --license licenses.txt",
-    "package:watch": "npm run package -- --watch",
-    "test": "(jest && make-coverage-badge --output-path ./badges/coverage.svg) || make-coverage-badge --output-path ./badges/coverage.svg",
-    "all": "npm run format:write && npm run lint && npm run test && npm run package"
-  },
-  "license": "MIT",
-  "jest": {
-    "preset": "ts-jest",
-    "verbose": true,
-    "clearMocks": true,
-    "testEnvironment": "node",
-    "moduleFileExtensions": [
-      "js",
-      "ts"
-    ],
-    "testMatch": [
-      "**/*.test.ts"
-    ],
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "/dist/"
-    ],
-    "transform": {
-      "^.+\\.ts$": "ts-jest"
-    },
-    "coverageReporters": [
-      "json-summary",
-      "text",
-      "lcov"
-    ],
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "./src/**"
-    ]
+    "build": "ncc build src/main.ts --license LICENSE && action-docs --update-readme"
   },
   "dependencies": {
-    "@actions/core": "^1.10.1"
+    "@actions/core": "^1.10.1",
+    "@actions/github": "^6.0.0"
   },
   "devDependencies": {
     "@types/jest": "^29.5.6",
@@ -73,6 +36,7 @@
     "@typescript-eslint/eslint-plugin": "^6.9.0",
     "@typescript-eslint/parser": "^6.9.0",
     "@vercel/ncc": "^0.38.1",
+    "action-docs": "^1.2.0",
     "eslint": "^8.52.0",
     "eslint-plugin-github": "^4.10.1",
     "eslint-plugin-jest": "^27.6.0",

@@ -1,26 +1,44 @@
+import * as path from 'path'
 import * as core from '@actions/core'
-import { wait } from './wait'
+import * as github from '@actions/github'
 
-/**
- * The main function for the action.
- * @returns {Promise<void>} Resolves when the action is complete.
- */
-export async function run(): Promise<void> {
+type PackageType = 'docker' | 'npm'
+
+async function run() {
+  const token = core.getInput('github-token')
+  const client = github.getOctokit(token)
+
+  const package_path = path.resolve(process.env.NODE_PACKAGE_PATH!)
+  const package_spec = require(package_path)
+  const package_type = core.getInput('github-package-type') as PackageType
+
+  const [organization_name, package_name] = package_spec.name
+    .replace('@', '')
+    .split('/')
+
   try {
-    const ms: string = core.getInput('milliseconds')
+    const { data: packages } =
+      await client.rest.packages.getAllPackageVersionsForPackageOwnedByOrg({
+        org: organization_name,
+        package_name: package_name,
+        package_type: package_type,
+        per_page: 1,
+        page: 1
+      })
 
-    // Debug logs are only output if the `ACTIONS_STEP_DEBUG` secret is true
-    core.debug(`Waiting ${ms} milliseconds ...`)
+    const version = packages.length > 0 ? packages[0].name : '0.0.0'
 
-    // Log the current timestamp, wait, then log the new timestamp
-    core.debug(new Date().toTimeString())
-    await wait(parseInt(ms, 10))
-    core.debug(new Date().toTimeString())
-
-    // Set outputs for other workflow steps to use
-    core.setOutput('time', new Date().toTimeString())
+    switch (package_type) {
+      case 'npm':
+        // export the version
+        core.exportVariable('GH_NODE_PACKAGE_VERSION', version)
+      case 'docker':
+        // export the version
+        core.exportVariable('GH_DOCKER_IMAGE_VERSION', version)
+    }
   } catch (error) {
-    // Fail the workflow run if an error occurs
-    if (error instanceof Error) core.setFailed(error.message)
+    core.notice(error as Error)
   }
 }
+
+run()

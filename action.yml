@@ -1,18 +1,17 @@
-name: 'The name of your action here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'github-package-version'
+description: 'Get the latest version of a package from GitHub Packages'
+author: 'Svetlin Ralchev'
 
 # Define your inputs here.
 inputs:
-  milliseconds:
-    description: 'Your input description here'
+  github-token:
+    description: 'The GitHub token used to create an authenticated client'
+    default: '${{ github.token }}'
     required: true
-    default: '1000'
-
-# Define your outputs here.
-outputs:
-  time:
-    description: 'Your output description here'
+  github-package-type:
+    description: 'The GitHub package type'
+    default: 'npm'
+    required: true
 
 runs:
   using: node20
