@@ -29,8 +29,8 @@ devDependencies:
     specifier: ^0.38.1
     version: 0.38.1
   action-docs:
-    specifier: ^2.0.0
-    version: 2.0.0(@typescript-eslint/parser@6.21.0)(eslint-plugin-import@2.29.0)(eslint@8.56.0)
+    specifier: ^2.0.1
+    version: 2.0.1(@typescript-eslint/parser@6.21.0)(eslint-plugin-import@2.29.0)(eslint@8.56.0)
   eslint:
     specifier: ^8.56.0
     version: 8.56.0
@@ -1210,8 +1210,8 @@ packages:
     hasBin: true
     dev: true
 
-  /action-docs@2.0.0(@typescript-eslint/parser@6.21.0)(eslint-plugin-import@2.29.0)(eslint@8.56.0):
-    resolution: {integrity: sha512-AT46HljUncSwJQAF2cojGzpFKzth9eV11as1zSJ5KPp3un0yreFNEwYvr4Zwip37fR64szeGgLyNn8dOFgW1yg==}
+  /action-docs@2.0.1(@typescript-eslint/parser@6.21.0)(eslint-plugin-import@2.29.0)(eslint@8.56.0):
+    resolution: {integrity: sha512-dBm/Mwfe7xvDIBGjRD1/EYaOofodih9oFrUDIFciRFzvlHQbVeN3UKAjqxpGs0CIpQr20ZQ2PWVLpPmjqQOMig==}
     hasBin: true
     dependencies:
       chalk: 5.3.0
