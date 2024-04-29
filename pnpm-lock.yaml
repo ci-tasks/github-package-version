@@ -29,8 +29,8 @@ devDependencies:
     specifier: ^0.38.1
     version: 0.38.1
   action-docs:
-    specifier: ^2.4.0
-    version: 2.4.0
+    specifier: ^2.4.1
+    version: 2.4.1
   eslint:
     specifier: ^8.57.0
     version: 8.57.0
@@ -1342,8 +1342,8 @@ packages:
     hasBin: true
     dev: true
 
-  /action-docs@2.4.0:
-    resolution: {integrity: sha512-ALXUZDKRDfVhAvhNF9HHCRMMZXRtq00vb/rPZCJcZZOtwirch8lpWUyE727XMTjguZsK67aciV9d2VRH2opK3A==}
+  /action-docs@2.4.1:
+    resolution: {integrity: sha512-cCbnJVn+h9BNACKpWaZtVUvGEm8NW49QRjKSRUNMA16BpJ0I5jh4AM1wwrFTl8E9ZSceOJsoB20MvC0qz2NKOg==}
     hasBin: true
     dependencies:
       chalk: 5.3.0
