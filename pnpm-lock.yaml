@@ -59,8 +59,8 @@ devDependencies:
     specifier: ^3.5.3
     version: 3.5.3
   prettier-eslint:
-    specifier: ^16.3.2
-    version: 16.3.2(typescript@5.8.3)
+    specifier: ^16.4.1
+    version: 16.4.1(typescript@5.8.3)
   ts-jest:
     specifier: ^29.3.2
     version: 29.3.2(@babel/core@7.23.2)(jest@29.7.0)(typescript@5.8.3)
@@ -4231,8 +4231,8 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-eslint@16.3.2(typescript@5.8.3):
-    resolution: {integrity: sha512-KwT/YWoJGbogsHLZ+Rji8ih6JaUqoA8Z4PAxomcVWhq3gYp5jXgSS/BzB3tm6lWS+Hd4VBF81jqMrdJhXKkhcg==}
+  /prettier-eslint@16.4.1(typescript@5.8.3):
+    resolution: {integrity: sha512-qf8Grhq68kg0tyhXVik2aOx72W8Jxre2ABXgV1pC3OCb3jOo40UZuvk3f/I3/ZA7Qw6qydZX4b7ySSCSgv4/8A==}
     engines: {node: '>=16.10.0'}
     peerDependencies:
       prettier-plugin-svelte: ^3.0.0
