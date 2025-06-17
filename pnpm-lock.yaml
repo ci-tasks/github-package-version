@@ -44,8 +44,8 @@ devDependencies:
     specifier: ^2.20.1
     version: 2.20.1(eslint@8.57.1)
   eslint-plugin-prettier:
-    specifier: ^5.4.1
-    version: 5.4.1(eslint-config-prettier@10.1.1)(eslint@8.57.1)(prettier@3.5.3)
+    specifier: ^5.5.0
+    version: 5.5.0(eslint-config-prettier@10.1.1)(eslint@8.57.1)(prettier@3.5.3)
   jest:
     specifier: ^30.0.0
     version: 30.0.0(@types/node@24.0.3)
@@ -2592,7 +2592,7 @@ packages:
       eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.27.0)(eslint@8.57.1)
       eslint-plugin-jsx-a11y: 6.10.2(eslint@8.57.1)
       eslint-plugin-no-only-tests: 3.3.0
-      eslint-plugin-prettier: 5.4.1(eslint-config-prettier@10.1.1)(eslint@8.57.1)(prettier@3.5.3)
+      eslint-plugin-prettier: 5.5.0(eslint-config-prettier@10.1.1)(eslint@8.57.1)(prettier@3.5.3)
       eslint-rule-documentation: 1.0.23
       globals: 16.0.0
       jsx-ast-utils: 3.3.5
@@ -2722,8 +2722,8 @@ packages:
     engines: {node: '>=5.0.0'}
     dev: true
 
-  /eslint-plugin-prettier@5.4.1(eslint-config-prettier@10.1.1)(eslint@8.57.1)(prettier@3.5.3):
-    resolution: {integrity: sha512-9dF+KuU/Ilkq27A8idRP7N2DH8iUR6qXcjF3FR2wETY21PZdBrIjwCau8oboyGj9b7etWmTGEeM8e7oOed6ZWg==}
+  /eslint-plugin-prettier@5.5.0(eslint-config-prettier@10.1.1)(eslint@8.57.1)(prettier@3.5.3):
+    resolution: {integrity: sha512-8qsOYwkkGrahrgoUv76NZi23koqXOGiiEzXMrT8Q7VcYaUISR+5MorIUxfWqYXN0fN/31WbSrxCxFkVQ43wwrA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       '@types/eslint': '>=8.0.0'
