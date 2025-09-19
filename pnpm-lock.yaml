@@ -26,8 +26,8 @@ devDependencies:
     specifier: ^6.21.0
     version: 6.21.0(eslint@8.57.1)(typescript@5.8.3)
   '@vercel/ncc':
-    specifier: ^0.38.3
-    version: 0.38.3
+    specifier: ^0.38.4
+    version: 0.38.4
   action-docs:
     specifier: ^2.5.1
     version: 2.5.1
@@ -1721,8 +1721,8 @@ packages:
     dev: true
     optional: true
 
-  /@vercel/ncc@0.38.3:
-    resolution: {integrity: sha512-rnK6hJBS6mwc+Bkab+PGPs9OiS0i/3kdTO+CkI8V0/VrW3vmz7O2Pxjw/owOlmo6PKEIxRSeZKv/kuL9itnpYA==}
+  /@vercel/ncc@0.38.4:
+    resolution: {integrity: sha512-8LwjnlP39s08C08J5NstzriPvW1SP8Zfpp1BvC2sI35kPeZnHfxVkCwu4/+Wodgnd60UtT1n8K8zw+Mp7J9JmQ==}
     hasBin: true
     dev: true
 
